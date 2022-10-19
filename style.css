@@ -11,6 +11,13 @@ body {
   background-image: radial-gradient(circle at center bottom, #e9b64b, #c76075 15%, #0d0d4b 75%, #190e14 90%);
 }
 
+h2 
+{
+  text-align: center;
+  color:#e5e5e5;
+  word-wrap: break-word;
+}
+
 div#beach,
 canvas#canvas {
   position: absolute;
@@ -34,9 +41,14 @@ div#video {
   bottom: 200px;
 }
 
-div#video iframe {
+div#video h2 {
   width: 255px;
   height: 155px;
+}
+
+div#video img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #people {
@@ -51,6 +63,17 @@ div#video iframe {
   bottom: 46px;
   left: 180px;
   width: 230px;
+}
+
+div#topic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+
 }
 
 div#sea {
@@ -69,7 +92,7 @@ div#sea {
   left: 0px;
   bottom: 0px;
   top: 0px;
-  background-color: #d44;
+  background-color: rgb(184, 26, 163);
   transition: background-color .5s ease;
 }
 
@@ -95,7 +118,7 @@ div#sea {
   position: absolute;
   color: #fff;
   width: 100%;
-  content: "Click Me!";
+  content: "Open Me!";
   left: 0;
   bottom: 0;
   font-size: 24px;
@@ -116,7 +139,7 @@ div#sea {
   left: 50%;
   width: 50px;
   transform: translateX(-50%);
-  background: #fdc56d;
+  background: #6dfd80;
 }
 .giftbox .cover > div {
   position: absolute;
@@ -133,7 +156,7 @@ div#sea {
   width: 100%;
   height: 100%;
   content: "";
-  box-shadow: inset 0 0 0 15px #fdc56d;
+  box-shadow: inset 0 0 0 15px #6dfd91;
   border-radius: 30px;
   transform-origin: 50% 100%;
 }
@@ -154,7 +177,7 @@ div#sea {
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: #fdc56d;
+  background: #85fd6d;
 }
 .giftbox .box:after {
   width: 100%;

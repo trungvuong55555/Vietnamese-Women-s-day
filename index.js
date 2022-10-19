@@ -271,9 +271,13 @@ window.onload = function () {
     }
     stepClass(step);
     if (step === 3) {
+      
     }
     if (step === 4) {
       reveal();
+      //Congratulations();
+      
+      Congratulations();
       return;
     }
     setTimeout(openBox, stepMinutes[step - 1]);
@@ -284,25 +288,23 @@ window.onload = function () {
 
 };
 
+function mucsic()
+{
+
+}
+
+var congrattext="Best   wishes   for   your   special   day!\n   Shine   on....   Not   just   today   but   everyday!";
+var pos = 0;
+
 
 function Congratulations(){
-  
-  var congrattext="Happy   Women's   Day My Dear!\n   Best   wishes   for   your   special   day!\n   Shine   on....   Not   just   today   but   everyday!";
-  var pos = 0;
-  var intv = setTimeout("Congratulations()",75);
-  
-  var congrat = document.createElement("h2");
-  if(pos != congrattext.length){
+  if(pos < congrattext.length)
+  {
     congrat.innerHTML += congrattext[pos];
-    pos++;
+    pos ++;
+    setTimeout(Congratulations, 50);
   }
-  else{
-    clearInterval(intv)
-  }
-
-  return congrat;
 }
-//setTimeout("Congratulations()",500);
 
 function reveal() {
   document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
@@ -319,17 +321,12 @@ function reveal() {
 
   // documents dung de truy cap vao bat cu element trong mot HTML pages
 
-  var ifrm = document.createElement("iframe").contentWindow.document;
-  ifrm.open()
-  ifrm.write('Test');
-  ifrm.close;
-  
-  // ifrm.setAttribute("src", "https://www.youtube.com/embed/RMtYR-Kf1V8?controls=0");
-  // ifrm.style.width = `${w}px`;
-  // ifrm.style.height = `${h}px`;
-  ifrm.style.border = 'none';
+  var ifrm = document.createElement("img");
 
-  //var ifrm = Congratulations();
+  ifrm.setAttribute("src", "minion.gif")
+  ifrm.style.width = `${w}px`;
+  ifrm.style.height = `${h}px`;
   document.querySelector('#video').appendChild(ifrm);
+
 }
 
