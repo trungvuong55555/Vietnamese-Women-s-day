@@ -18,6 +18,11 @@ h2
   word-wrap: break-word;
 }
 
+audio
+{
+  display: none;
+}
+
 div#beach,
 canvas#canvas {
   position: absolute;
@@ -200,7 +205,7 @@ div#sea {
 .icons .row span {
   color: #e5e5e5;
   text-shadow: 4px 4px 0 rgba(96, 125, 139, 0.4);
-  font-size: 50px;
+  font-size: 10px;
   display: inline-block;
   opacity: 0;
   transition: transform 0.5s ease-in, opacity 0.7s;

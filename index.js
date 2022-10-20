@@ -260,6 +260,20 @@ window.onload = function () {
   var stepMinutes = [2000, 2000, 1000, 1000];
   function init() {
     box.addEventListener("click", openBox, false);
+    box.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.volume = 0.2;
+        audio.play();
+        icon.classList.remove('fa-volume-up');
+        icon.classList.add('fa-volume-mute');
+        
+      } else {
+        audio.pause();
+        icon.classList.remove('fa-volume-mute');
+        icon.classList.add('fa-volume-up');
+      }
+      button.classList.add("fade");
+    });
   }
   function stepClass(step) {
     merrywrap.className = 'merrywrap';
@@ -267,17 +281,24 @@ window.onload = function () {
   }
   function openBox() {
     if (step === 1) {
+      //PlayMusic();
       box.removeEventListener("click", openBox, false);
     }
     stepClass(step);
     if (step === 3) {
-      
+      //button.addEventListener("click", PlayMusic, false);
+      //audio.volume = 1;
+      //audio.play();
     }
     if (step === 4) {
       reveal();
       //Congratulations();
+      //audio.play();
       
       Congratulations();
+
+
+      
       return;
     }
     setTimeout(openBox, stepMinutes[step - 1]);
@@ -288,14 +309,14 @@ window.onload = function () {
 
 };
 
-function mucsic()
-{
 
-}
 
-var congrattext="Best   wishes   for   your   special   day!\n   Shine   on....   Not   just   today   but   everyday!";
+
+const audio = document.querySelector("audio");
+
+
+var congrattext="Best  wishes  for  special   day! Shine   on....   Not   just   today   but   everyday!";
 var pos = 0;
-
 
 function Congratulations(){
   if(pos < congrattext.length)
